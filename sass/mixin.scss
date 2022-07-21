@@ -1,0 +1,60 @@
+@mixin lineBreak {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // width: 100%;
+  // max-width: 100%;
+}
+@mixin wordBreak {
+  word-break: break-all;
+}
+@mixin saleSpan {
+  border-radius: 11px 0 11px 0;
+  background-color: $textPrice;
+  color: #fff;
+  padding: 3px 8px;
+}
+@mixin priceSpan {
+  color: $textPrice;
+  font-weight: 600;
+}
+@mixin priceDel {
+  color: #ccc;
+  font-weight: 500;
+}
+@mixin leftin20percent {
+  // padding: 30px 35px 60px 35px;
+  border-radius: 8px;
+  background-color: #fbf1eb;
+  background-repeat: no-repeat;
+}
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+@mixin listBefore {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: $bgcMain;
+  border-radius: 50%;
+}
+@mixin buyNow {
+  position: absolute;
+  left: 50%;
+  bottom: 10% !important;
+  transform: translateX(-50%);
+  width: 80%;
+  border-radius: 20px;
+  background-color: #ff2000;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  color: #fff;
+}

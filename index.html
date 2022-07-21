@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youme</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- OWL CAROUSEL CSS -->
+  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- IONIC -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- STYLE.CSS -->
+  <link rel="stylesheet" href="./sass/css/style.css">
+</head>
+<body>
+    <div class="container-nav">
+        <nav>
+          <ul>
+            <li><a target="_blank" href="https://kiet.viettechcorp.vn/anhduy/trang-chu">Trang chủ</a></li>
+            <li><a target="_blank" href="https://kiet.viettechcorp.vn/anhduy/gioi-thieu">Giới thiệu</a></li>
+            <li><a target="_blank" href="https://kiet.viettechcorp.vn/anhduy/san-pham">Sản phẩm&nbsp<ion-icon name="chevron-down-outline"></ion-icon></a>
+                <ul class="container-header__dropdown">
+                    <li><a href="">Trái cây</a></li>
+                    <li><a href="">Thịt tươi</a></li>
+                    <li><a href="">Rau củ</a></li>
+                    <li><a href="">Thực phẩm khô</a></li>
+                    <li><a href="">Thực phẩm đóng gói</a></li>
+                </ul>
+            </li>
+            <li><a target="_blank" href="https://kiet.viettechcorp.vn/anhduy/tin-tuc">Tin tức</a></li>
+            <li><a target="_blank" href="https://kiet.viettechcorp.vn/anhduy/lien-he">Liên hệ</a></li>
+          </ul>
+          <img src="https://kiet.viettechcorp.vn/anhduy/upload/1111_n_-26-11-2021-14-18-05.png" alt="">
+          <div class="container-header__wrapper">
+            <div class="container-header__searchbtn">
+              <input name="title" type="text" placeholder="Tìm kiếm..." />
+              <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+            </div>
+            <div class="header__shopping-cart">
+              <a href="#">
+                <span class="header__number-cart">0</span>
+                <span class="header__icon-cart"><ion-icon name="basket-outline"></ion-icon></span>
+              </a>
+            </div>
+            <div class="header__number-hamburger">
+                <a href="#">
+                    <ion-icon name="menu-outline" onclick="openFunc()"></ion-icon>
+                </a>
+            </div>
+          </div>
+        </nav>
+    </div>
+    <div id="container__navi">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Sản phẩm</a>
+            <ul id="menu-child">
+              <li><a href="#">Trái cây</a></li>
+              <li><a href="#">Thịt tươi</a></li>
+              <li><a href="#">Rau củ</a></li>
+              <li><a href="#">Thực phẩm khô</a></li>
+              <li><a href="#">Thực phẩm đóng gói</a></li>
+            </ul>
+          </li>
+          <img id="open-close" src="./icons/expand-black-24dp.svg" alt="">
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+        <div>
+          <img onclick="closeFunc()" id="cancelbtn" src="./icons/cancel-white-24dp.svg" alt="">
+        </div>
+      </div>
+    <div class="container-header">
+        <div class="container-header__cover"> 
+        <div class="owl-carousel" id="position__back-to-top">
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/slide_-15-11-2021-15-28-49.png" alt="Cover">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/slide_-15-11-2021-15-28-49.png" alt="cover">
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <div class="container__body">
+        <div class="body-slider__wrapper--1">
+        <div class="owl-carousel">
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/kho_-25-11-2021-11-39-25.png" alt="cover">
+                </div>
+                <h4 class="break">Thực phẩm đóng gói</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/kho_-25-11-2021-11-39-25.png" alt="cover">
+                </div>
+                <h4 class="break">Thực phẩm sạch</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/cate_4_-15-11-2021-16-50-00.webp" alt="Cover">
+                </div>
+                <h4>Trái cây</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/cate_3_-15-11-2021-16-50-21.jpg" alt="cover">
+                </div>
+                <h4>Thịt tươi</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/cai_-25-11-2021-11-37-55.png" alt="cover">
+                </div>
+                <h4>Rau củ</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/chai_-25-11-2021-11-38-50.png" alt="cover">
+                </div>
+                <h4 class="break">Thực phẩm khô</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/kho_-25-11-2021-11-39-25.png" alt="cover">
+                </div>
+                <h4>Vàng</h4>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="http://kiet.viettechcorp.vn/anhduy/upload/kho_-25-11-2021-11-39-25.png" alt="cover">
+                </div>
+                <h4 class="break">Kim cương</h4>
+            </div>
+        </div>
+        </div>
+        <div class="body-slider__wrapper--2">
+        <h2 class="container__sale--title">
+            <span><img src="https://cdn-icons.flaticon.com/png/512/2275/premium/2275975.png?token=exp=1640429172~hmac=80abb8302683f9ba0cb189197bd206bb" alt=""></span>
+            ƯU ĐÃI TRONG TUẦN
+        </h2>
+        <div class="owl-carousel">
+            <div class="item">
+            <span>50%</span>
+            <img src="http://kiet.viettechcorp.vn/anhduy/upload/sp2_-16-11-2021-14-15-11.webp" alt="">
+            <h3>Đào đỏ Mỹ</h3>
+            <p><span>5.000đ</span><del>10.000đ</del></p>
+            </div>
+            <div class="item">
+            <span>20%</span>
+            <img src="http://kiet.viettechcorp.vn/anhduy/upload/sp22_-16-11-2021-14-14-02.webp" alt="">
+            <h3>Ổi lê ruột đỏ</h3>
+            <p><span>40.000đ</span><del>50.000đ</del></p>
+            </div>
+            <div class="item">
+            <span>20%</span>
+            <img src="http://kiet.viettechcorp.vn/anhduy/upload/sp3_-16-11-2021-14-16-55.webp" alt="">
+            <h3>Dâu tây đỏ</h3>
+            <p><span>5.000đ</span><del>10.000đ</del></p>
+            </div>
+            <div class="item">
+            <span>13%</span>
+            <img src="http://kiet.viettechcorp.vn/anhduy/upload/sp10_-16-11-2021-16-24-07.jpg" alt="">
+            <h3>Cá hồi</h3>
+            <p><span>130.000đ</span><del>150.000đ</del></p>
+            </div>
+            <div class="item">
+            <span>14%</span>
+            <img src="http://kiet.viettechcorp.vn/anhduy/upload/sp12_-16-11-2021-16-23-32.webp" alt="">
+            <h3>Cá hồi</h3>
+            <p><span>60.000đ</span><del>70.000đ</del></p>
+            </div>
+        </div>  
+        </div>
+        <div class="container__body--photo">
+        <div class="container__body--photo-1">
+            <img src="https://kiet.viettechcorp.vn/anhduy/upload/thiet_-25-11-2021-14-00-54.jpg" alt="">
+        </div>
+        <div class="container__body--photo-2">
+            <img src="https://kiet.viettechcorp.vn/anhduy/upload/hello_-25-11-2021-14-00-54.jpg" alt="">
+        </div>
+        </div>
+        <div class="body-slider__wrapper--3">
+        <div class="ad">
+            <p>Trái cây</p>
+            <ul>
+                <li><a href="">Dâu tây đỏ</a></li>
+                <li><a href="">Ổi lê ruột đỏ</a></li>
+                <li><a href="">Đào đỏ Mỹ</a></li>
+            </ul>
+            <a href="https://kiet.viettechcorp.vn/anhduy/dang-cap-nhat-1636966797">Mua sắm ngay bây giờ</a>
+        </div>
+        <div class="owl-carousel">
+            <div class="item">
+                <div class="image">
+                    <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp2_-16-11-2021-14-15-11.webp" alt="Cover">
+                </div>
+                <span>50%</span>
+                <h4>Đào đỏ Mỹ</h4>
+                <p><span>5.000đ</span> <del>10.000đ</del></p>
+                <div class="adding">
+                    <div class="calculator">
+                        <input type="text">
+                        <span class="plus-minus minus"></span>
+                        <span class="number"></span>
+                        <span class="plus-minus plus"></span>
+                        <span class="unit">kg</span>
+                    </div>
+                    <div class="cart">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp22_-16-11-2021-14-14-02.webp" alt="Cover">
+                </div>
+                <span>20%</span>
+                <h4>Ổi lê ruột đỏ</h4>
+                <p><span>40.000đ</span> <del>50.000đ</del></p>
+                <div class="adding">
+                    <div class="calculator">
+                        <input type="text">
+                        <span class="plus-minus minus"></span>
+                        <span class="number"></span>
+                        <span class="plus-minus plus"></span>
+                        <span class="unit">bịch</span>
+                    </div>
+                    <div class="cart">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp3_-16-11-2021-14-16-55.webp" alt="Cover">
+                </div>
+                <span>20%</span>
+                <h4>Dâu tây đỏ</h4>
+                <p><span>80.000đ</span> <del>100.000đ</del></p>
+                <div class="adding">
+                    <div class="calculator">
+                        <input type="text">
+                        <span class="plus-minus minus"></span>
+                        <span class="number"></span>
+                        <span class="plus-minus plus"></span>
+                        <span class="unit">g</span>
+                    </div>
+                    <div class="cart">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="body-slider__wrapper--4">
+            <div class="ad">
+                <p>Thịt tươi</p>
+                <ul>
+                    <li>Thịt bò</li>
+                    <li>Cá hồi</li>
+                </ul>
+                <a href="">Mua sắm ngay bây giờ</a>
+            </div>
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp10_-16-11-2021-16-24-07.jpg" alt="Cover">
+                    </div>
+                    <span>13%</span>
+                    <h4>Cá hồi</h4>
+                    <p><span>130.000đ</span> <del>150.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">kg</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp12_-16-11-2021-16-23-32.webp" alt="Cover">
+                    </div>
+                    <span>14%</span>
+                    <h4>Thịt bò</h4>
+                    <p><span>60.000đ</span> <del>70.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">bịch</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="body-slider__wrapper--5">
+            <div class="ad">
+                <p>Rau củ</p>
+                <!-- <ul>
+                    <li>Thịt bò</li>
+                    <li>Cá hồi</li>
+                </ul> -->
+                <a href="">Mua sắm ngay bây giờ</a>
+            </div>
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp10_-16-11-2021-16-24-07.jpg" alt="Cover">
+                    </div>
+                    <span>13%</span>
+                    <h4>Cá hồi</h4>
+                    <p><span>130.000đ</span> <del>150.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">kg</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp12_-16-11-2021-16-23-32.webp" alt="Cover">
+                    </div>
+                    <span>14%</span>
+                    <h4>Thịt bò</h4>
+                    <p><span>60.000đ</span> <del>70.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">bịch</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="body-slider__wrapper--6">
+            <div class="ad">
+                <p>Thực phẩm khô</p>
+                <!-- <ul>
+                    <li>Thịt bò</li>
+                    <li>Cá hồi</li>
+                </ul> -->
+                <a href="">Mua sắm ngay bây giờ</a>
+            </div>
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp10_-16-11-2021-16-24-07.jpg" alt="Cover">
+                    </div>
+                    <span>13%</span>
+                    <h4>Cá hồi</h4>
+                    <p><span>130.000đ</span> <del>150.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">kg</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp12_-16-11-2021-16-23-32.webp" alt="Cover">
+                    </div>
+                    <span>14%</span>
+                    <h4>Thịt bò</h4>
+                    <p><span>60.000đ</span> <del>70.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">bịch</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="body-slider__wrapper--7">
+            <div class="ad">
+                <p>Thực phẩm đóng gói</p>
+                <!-- <ul>
+                    <li>Thịt bò</li>
+                    <li>Cá hồi</li>
+                </ul> -->
+                <a href="">Mua sắm ngay bây giờ</a>
+            </div>
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp10_-16-11-2021-16-24-07.jpg" alt="Cover">
+                    </div>
+                    <span>13%</span>
+                    <h4>Cá hồi</h4>
+                    <p><span>130.000đ</span> <del>150.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">kg</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="https://kiet.viettechcorp.vn/anhduy/upload/sp12_-16-11-2021-16-23-32.webp" alt="Cover">
+                    </div>
+                    <span>14%</span>
+                    <h4>Thịt bò</h4>
+                    <p><span>60.000đ</span> <del>70.000đ</del></p>
+                    <!-- <div class="adding">
+                        <div class="calculator">
+                            <span class="plus-minus minus">-</span>
+                            <span class="number">01</span>
+                            <span class="plus-minus plus">+</span>
+                            <span class="between"></span>
+                            <span class="unit">bịch</span>
+                        </div>
+                        <div class="cart">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png" alt="Cart Plus">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="body-news">
+            <h1>TIN TỨC</h1>
+            <div class="body-news__wrapper">
+                <div>
+                    <p>Đang cập nhật</p>
+                    <p>19/11/2021 10:18:56</p>
+                </div>
+                <div>
+                    <p>Đang cập nhật</p>
+                    <p>19/11/2021 10:18:56</p>
+                </div>
+                <div>
+                    <p>Đang cập nhật</p>
+                    <p>19/11/2021 10:18:56</p>
+                </div>
+                <div>
+                    <p>Đang cập nhật</p>
+                    <p>19/11/2021 10:18:56</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container__footer">
+        <img class="footer-logo" src="https://kiet.viettechcorp.vn/anhduy/upload/1111_n_-26-11-2021-14-18-05.png" alt="">
+        <h2>Giới thiệu ngắn về công ty</h2>
+        <div class="footer-info__wrapper">
+            <img class="footer-desc" src="https://kiet.viettechcorp.vn/anhduy/views/template/img/img-footer.webp" alt="">
+            <div class="footer-info__wrapper--small">
+                <h2 >Đăng ký nhận thông tin</h2>
+                <p>Đăng ký nhận bản tin để nhận ưu đãi đặc biệt về sản phẩm ND Fresh</p>
+                <div class="footer-email">
+                    <div>
+                        <input type="email" placeholder="Nhập email của bạn">
+                        <button>Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p>Liên hệ với chúng tôi</p>
+                <p>Địa chỉ: 266 Đội Cấn, Ba Đình, Hà Nội</p>
+                <p>Điện thoại:</p>
+                <p>Email:</p>
+            </div>
+        </div>
+
+        <p class="footer-copyright">Copyright © 2021 Công ty TNHH Đầu tư Bất động sản King Land Kiến Lửa</p>
+    </div>
+  <div class="container__features">
+    <div class="features-general features-create"><img src="./icons/create-white-18dp.svg" alt=""></div>
+    <div class="features-general features-chat"><img src="./icons/chat-white-18dp.svg" alt=""></div>
+    <div class="features-general features-zalo"><img src="./icons/zalo.png" alt=""></div>
+    <div class="features-general features-phone"><img src="./icons/phone-white-18dp.svg" alt=""></div>
+  </div>
+  <div class="button__back-to-top">
+    <a href="#position__back-to-top">
+      <img src="./icons/arrow-up-white-18dp.svg" alt="">
+    </a>
+  </div>
+
+
+  <!-- <div class="container-stick-back"></div>
+  <div class="container-stick-info"></div> -->
+
+
+  <!-- <br/><br/><br/><br/><br/><br/> -->
+  <!-- OWL CAROUSEL JS -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <script src="./js/slider.js"></script>
+  <!-- INTERACTION JS -->
+  <script src="./js/interaction.js"></script>
+</body>
+</html>
